@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-   <style>
+  <style>
         .boncharly-logo{
             width: 170px;
             align-self: center;
@@ -41,94 +41,116 @@
             font-weight: bold;
             font-size: 16px;
         }
+        .col-12{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .posts{
+            margin-top: -14px;
+            font-size: 19px;
+        }
         footer, .footer-area, .footer-bottom-area {
             background: #000;
         }
+
+        .subscribe-top{
+            font-size: 50px;
+            font-weight: bold;
+        }
         /* styles.css */
+        .team-member{
+            font-size: 21px;
+            font-weight: bold;
+        }
+        .popular-img{
+            margin-bottom: 20px;
+        }
 
+        .newsletter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        font-size: 19px;
+        padding: 60px 30px;
+        }
 
-.newsletter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  font-size: 19px;
-  padding: 60px 30px;
-}
+        .newsletter-content {
+        max-width: 650px;
+        text-align: center;
+        }
 
-.newsletter-content {
-  max-width: 650px;
-  text-align: center;
-}
+        .newsletter h2 {
+        font-size: 19px;
+        margin-bottom: 10px;
+        }
 
-.newsletter h2 {
-  font-size: 19px;
-  margin-bottom: 10px;
-}
+        .newsletter-content h2 {
+        font-size: 19px;
+        margin-bottom: 10px;
+        }
 
-.newsletter-content h2 {
-  font-size: 19px;
-  margin-bottom: 10px;
-}
+        .newsletter p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: #000;
+        font-size: 16px;
+        }
 
-.newsletter p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #000;
-  font-size: 16px;
-}
+        .newsletter-form {
+        display: flex;
+        gap: 10px;
+        font-size: 17px;
+        }
 
-.newsletter-form {
-  display: flex;
-  gap: 10px;
-  font-size: 17px;
-}
+        .newsletter-form input[type="email"] {
+        flex: 1;
+        padding: 10px;
+        font-size: 17px;
+        border: 1px solid #9e9d9d;
+        border-radius: 4px;
+        outline: none;
+        }
 
-.newsletter-form input[type="email"] {
-  flex: 1;
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid #9e9d9d;
-  border-radius: 4px;
-  outline: none;
-}
+        .newsletter-form button {
+        padding: 15px 25px;
+        font-size: 16px;
+        background-color: #ff6a00;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        }
 
-.newsletter-form button {
-  padding: 15px 25px;
-  font-size: 16px;
-  background-color: #ff6a00;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+        .newsletter-form button:hover {
+        background-color: #e65a00;
+        }
 
-.newsletter-form button:hover {
-  background-color: #e65a00;
-}
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+        .newsletter-form {
+            flex-direction: column;
+        }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .newsletter-form {
-    flex-direction: column;
-  }
+        .newsletter-form input[type="email"],
+        .newsletter-form button {
+            width: 100%;
+        }
+        }
 
-  .newsletter-form input[type="email"],
-  .newsletter-form button {
-    width: 100%;
-  }
-}
+        @media (max-width: 480px) {
+        .newsletter h2 {
+            font-size: 1.5rem;
+        }
 
-@media (max-width: 480px) {
-  .newsletter h2 {
-    font-size: 1.5rem;
-  }
+        .newsletter p {
+            font-size: 0.9rem;
+        }
+        }
 
-  .newsletter p {
-    font-size: 0.9rem;
-  }
-}
     </style>
     
 </head>
