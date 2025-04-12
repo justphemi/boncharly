@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -24,7 +24,10 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-   <style>
+<script defer
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<style>
         .boncharly-logo{
             width: 170px;
             align-self: center;
@@ -233,7 +236,7 @@
                         <h2 class="contact-title">Contact Us</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" onsubmit="sendEmail(event)" id="contactForm" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
@@ -339,7 +342,7 @@
             <div class="footer-tittle">
                 <h4>Quick links</h4>
                 <ul>
-                    <li><a href="https://shop.boncharly.com">Shop</a></li>
+                    <!-- <li><a href="#">Shop</a></li> -->
                     <li><a href="about.html">About</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -404,21 +407,38 @@
   </div>
   <!-- Footer End-->
 </footer>
-<!--? Search model Begin -->
-<!-- <div class="search-model-box">
-    <div class="h-100 d-flex align-items-center justify-content-center">
-        <div class="search-close-btn">+</div>
-        <form class="search-model-form">
-            <input type="text" id="search-input" placeholder="Searching key.....">
-        </form>
-    </div>
-</div> -->
-<!-- Search model end -->
-<!-- Scroll Up -->
+
 <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 
+<script>
+   (function(){
+      emailjs.init({publicKey:"VIW2T1NFKmPkqX5yX"}); 
+   })();
+   function sendEmail(event) {
+    event.preventDefault();
+    // Collect form data
+    const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+
+    // Send email using EmailJS
+    emailjs.send("service_kxqphtk", "service_kxqphtk", {
+        to_email: "boncharlytech@gmail.com", // Recipient email address
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message
+    }).then(function(response) {
+        console.log("Email sent successfully!");
+    }).catch(function(error) {
+        console.log("Error in sending email: " + error);
+    });
+}
+
+</script>
 
 <!-- JS here -->
 <!-- Jquery, Popper, Bootstrap -->
